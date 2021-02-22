@@ -2,6 +2,7 @@ import { Sprite } from 'pixi.js';
 import Scene from './Scene';
 import gsap from 'gsap';
 import Footer from '../components/Footer';
+import MagicHat from '../components/MagicHat';
 
 export default class Play extends Scene {
   async onCreated() {
@@ -10,6 +11,9 @@ export default class Play extends Scene {
     footer.x = - window.innerWidth / 2;
     footer.y = window.innerHeight / 2 - footer.height;
     this.addChild(footer);
+
+    const magicHat = new MagicHat();
+    this.addChild(magicHat);
   }
 
   /**

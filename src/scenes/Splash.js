@@ -27,6 +27,9 @@ export default class Splash extends Scene {
   preload() {
     const images = {
       logo: Assets.images.logo,
+      background: Assets.images.background,
+      hat: Assets.images.hat,
+      hatMask: Assets.images['hat-mask'],
     };
     const sounds = {
       
