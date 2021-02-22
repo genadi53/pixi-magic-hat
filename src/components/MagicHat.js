@@ -5,8 +5,8 @@ import { random } from '../core/utils';
 export default class MagicHat extends Container{
     constructor(){
         super();
-        this._item = null;
-        this._body = null;
+        this._item = new Text('');
+        this._body = new Sprite(Texture.from('hat'));
         this.name = 'magic-hat';
 
         this.createItem();
@@ -15,11 +15,10 @@ export default class MagicHat extends Container{
     }
 
     /**
-     *  @description Creates the hat 
+     *  @description Sets the properties of the hat
      *  @private
      */
     createBody(){
-        this._body = new Sprite(Texture.from('hat'));
         this._body.x = 0;
         this._body.y = 100;
         this._body.anchor.set(0.5);
@@ -36,7 +35,7 @@ export default class MagicHat extends Container{
      *  @private
      */
     createItem(){
-        this._item = new Text('', { fontSize: 200 });
+        this._item.style = { fontSize: 200 };
         this._item.y = 0;
         this._item.x = 0;
         this._item.anchor.set(0.5);
